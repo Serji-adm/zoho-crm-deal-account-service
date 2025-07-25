@@ -11,6 +11,9 @@ docker exec -it container-zoho-crm-app php artisan migrate
 npm run dev
 
 
+sudo chmod -R 777 storage/logs/
+sudo chmod -R 777 storage/framework/
+
 docker exec -it container-zoho-crm-app php artisan route:clear
 docker exec -it container-zoho-crm-app php artisan config:clear
 docker exec -it container-zoho-crm-app php artisan cache:clear
